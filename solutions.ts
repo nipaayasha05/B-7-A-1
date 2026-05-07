@@ -34,7 +34,6 @@ function getProperty<T>(obj: T, key: keyof T) {
 }
 const user = { id: 1, name: "John Doe", age: 21 };
 const property1 = getProperty(user, "name");
-console.log(property1);
 
 // p-5
 interface Book {
