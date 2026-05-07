@@ -7,12 +7,15 @@ In TypeScript, the type 'any' is called a "type safety hole" because it disables
 We use TypeScript to find errors before runtime, but using 'any' can lead to runtime errors.
 
 Example:
+
 let data: any;
 
 data = "hello";
+
 data.toUpperCase(); // works
 
 data = 5;
+
 data.toUpperCase(); // runtime error: toUpperCase is not a function
 
 ## Why is unknown safer than any?
@@ -24,7 +27,9 @@ Example:
 let value: unknown ="hello";
 
 if (typeof value === "string") {
+
 console.log(value.toUpperCase());// safe
+
 }
 
 ## type narrowing
@@ -34,10 +39,15 @@ Type narrowing means checking the type of a variable and making it more specific
 Example:
 
 function check(x: string | number) {
+
 if (typeof x === "string") {
+
 return x.length;
+
 }
+
 return x.toFixed(2);
+
 }
 
 Here, we check the type of x before using it. This is called type narrowing
